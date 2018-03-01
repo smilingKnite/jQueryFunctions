@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Functions!</title>
+	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('header').hover(function() {
+				$(this).css('border', '4px solid black');
+				}, function() {
+				$(this).css('border', '4px dotted black');
+			}); /*this is end of header*/
+
+			$('#a').click(function() {
+				$(this).toggleClass('red');
+			});/*this is end of #a*/
+			$('#b').click(function() {
+				$('.y p').slideToggle("slow");
+			});
+			$('#c').click(function() {
+				$('.z>p').append("<p>HelloOo, this is the hidden paragraph you've been wanting to see.. since you pressed the button.");
+			});
+			$('#d').click(function() {
+				$('.z p:last').remove();
+			});
+		});
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Hello, Friend</h1>
+			<h4>This is an assignment on jQuery</h4>
+		</header>
+
+		<div id="break"></div>
+
+		<div class="content x">
+			<h3>AddClass</h3>
+			<button id="a">AddClass</button>
+			<p>Click the button to add class 'red' to this paragraph.</p>
+		</div>
+
+		<div id="break"></div>
+
+		<div class="content y">
+			<h3>SlideToggle</h3>
+			<button id="b">SlideToggle</button>
+			<p>Click the button to slidetoggle a hidden image.</p>
+		</div>
+
+		<div id="break"></div>
+
+		<div class="content z">
+			<h3>Append</h3>
+			<button id="c">Append</button>
+			<button id="d">Remove</button>
+			<p>Click the button to append a new paragraph. And the other to remove the added paragraph. Just don't press remove for this paragraph or you'll have to re-load the page...</p>
+		</div>
+	</div>
+
+
+</body>
+</html>
